@@ -34,7 +34,7 @@ export function AnimeSection({ label, apiEndpoint, seeMoreLink }: Props) {
   return (
     <section className="container grid items-center gap-2 md:py-2">
       <h3 className="my-2 scroll-m-20 text-2xl font-semibold tracking-tight text-primary dark:text-primary">
-        {label} <span className="text-black dark:text-white">Section</span>
+        {label}
       </h3>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
         {isLoading ? (

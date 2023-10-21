@@ -42,7 +42,6 @@ export default function AnimePage({ label, apiEndpoint }: AnimePageProps) {
         <h3 className="mt-2 scroll-m-20 text-2xl font-semibold tracking-tight text-primary dark:text-primary">
           <span className="flex items-center text-primary">
             {label}
-            <span className="ml-2 text-black dark:text-white">Page</span>
             <code className="relative ml-2 rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold text-primary">
               #{currentPage}
             </code>
