@@ -71,6 +71,11 @@ export class AnimeApi {
     });
   }
 
+  async getByGenre(genre: string, params = {}): Promise<any> {
+    const path = paths.genre(genre);
+    return this.consumeApiGetCall(path, params);
+  }
+
   async getRandom(params = {}): Promise<any> {
     return this.consumeApiGetCall(paths.random, {
       ...params,

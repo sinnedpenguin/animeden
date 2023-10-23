@@ -3,6 +3,7 @@ import Link from "next/link";
 import { NavItem } from "@/types/nav";
 import { cn } from "@/lib/utils";
 import RandomAnime from "./anime/random";
+import GenresList from "./anime/genres";
 
 interface MobileNavProps {
   items?: NavItem[];
@@ -31,7 +32,12 @@ export function MobileNav({ items, closeSheet }: MobileNavProps) {
                 </li>
               )
           )}
-          <RandomAnime />
+          <div className="mt-3">
+            <GenresList />
+          </div>
+          <div className="mt-3">
+            <RandomAnime />
+          </div>
         </ul>
       ) : null}
     </div>

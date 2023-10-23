@@ -10,9 +10,10 @@ import AnimePagination from '@/components/anime/pagination';
 interface AnimePageProps {
   label: string;
   apiEndpoint: string;
+  genre?: string;
 }
 
-export default function AnimePage({ label, apiEndpoint }: AnimePageProps) {
+export default function AnimePage({ label, apiEndpoint, genre }: AnimePageProps) {
   const [animes, setAnimes] = useState<Anime[] | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [hasNextPage, setHasNextPage] = useState(true);
@@ -21,20 +22,31 @@ export default function AnimePage({ label, apiEndpoint }: AnimePageProps) {
   useEffect(() => {
     const fetchAnimes = async () => {
       setIsLoading(true);
-
+    
       try {
-        const response = await animeApi[apiEndpoint]({ perPage: 30, page: currentPage });
+        let response;
+        if (apiEndpoint !== 'getByGenre') {
+          response = await animeApi[apiEndpoint]({ perPage: 30, page: currentPage });
+        } else {
+          if (genre) {
+            response = await animeApi[apiEndpoint](genre, { perPage: 30, page: currentPage });
+          } else {
+            console.error(`Error fetching ${label} anime data.`);
+            return;
+          }
+        }
+
         setAnimes(response.results);
         setHasNextPage(response.hasNextPage);
       } catch (error) {
         console.error(`Error fetching ${label} anime data:`, error);
       } finally {
-        setIsLoading(false); 
+        setIsLoading(false);
       }
     };
 
     fetchAnimes();
-  }, [currentPage, apiEndpoint, label]);
+  }, [currentPage, apiEndpoint, label, genre]);
   
   return (
     <div>

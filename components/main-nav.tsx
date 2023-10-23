@@ -3,6 +3,7 @@ import Link from "next/link";
 import { NavItem } from "@/types/nav";
 import { cn } from "@/lib/utils";
 import RandomAnime from "./anime/random";
+import GenresList from "./anime/genres";
 
 interface MainNavProps {
   items?: NavItem[];
@@ -29,6 +30,7 @@ export function MainNav({ items }: MainNavProps) {
                 </Link>
               )
           )}
+          <GenresList />
           <RandomAnime />
         </nav>
       ) : null}
