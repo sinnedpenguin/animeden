@@ -12,6 +12,7 @@ AnimeDen is a free and ad-free anime streaming app.
 
 - **Trending:** Discover the latest trending anime.
 - **Popular:** Explore popular anime.
+- **Genre:** Browse anime by a specific genre.
 - **Random:** Don't know what to watch? Get a random anime!
 
 ### Search
