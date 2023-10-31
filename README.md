@@ -5,13 +5,14 @@ AnimeDen is a free and ad-free anime streaming app.
 ## Features
 
 ### Responsive UI
-![Screenshot 2023-10-21 194338](https://github.com/sinnedpenguin/animeden/assets/133164950/e946c4e9-7c13-4a16-b2bb-13ab9f0b9910)
-![Screenshot 2023-10-21 194511](https://github.com/sinnedpenguin/animeden/assets/133164950/c526520f-ca5a-4434-9ab5-252185979293)
+![Screenshot 2023-10-25 154435](https://github.com/sinnedpenguin/animeden/assets/133164950/ef5fe265-319e-475f-9ff3-bb156e85281c)
+![Screenshot 2023-10-25 154529](https://github.com/sinnedpenguin/animeden/assets/133164950/be710a82-f8f4-4c36-b0de-5bef8b53b860)
 
 ### Anime Catalog
 
 - **Trending:** Discover the latest trending anime.
 - **Popular:** Explore popular anime.
+- **Genre:** Browse anime by a specific genre.
 - **Random:** Don't know what to watch? Get a random anime!
 
 ### Search
