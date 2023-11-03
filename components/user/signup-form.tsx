@@ -13,7 +13,7 @@ import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import { useToast } from "@/components/ui/use-toast";
 import { Icons } from '../icons';
-import { signUpWithEmail } from '@/app/api/user';
+import { signInWithGoogle, signUpWithEmail } from '@/app/api/user';
 
 const formSchema = z.object({
   email: z.string().email({
@@ -61,6 +61,23 @@ export default function SignUpForm(props: SignUpFormProps) {
       toast({
         title: "Error signing up",
         description: "Error" 
+      });
+    }
+  }
+
+  async function handleSignInWithGoogle(data: any) {
+    try {
+      await signInWithGoogle();
+      props.onSubmit(data);
+
+      toast({
+        title: "Sign in with Google successful!",
+      });
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Sign in with Google failed",
+        description: "An error occurred during Google sign-in. Please try again."
       });
     }
   }
@@ -118,9 +135,19 @@ export default function SignUpForm(props: SignUpFormProps) {
             <Button type="submit" className="w-full">
               Sign up
             </Button>
+            <div className="mt-2 flex w-full items-center">
+              <div className="flex-1 border-t border-gray-300"></div>
+              <p className="mx-4 text-sm">or</p>
+              <div className="flex-1 border-t border-gray-300"></div>
+            </div>
           </div>
         )}
         </form>
+        <div>
+          <Button type="button" className="w-full" onClick={handleSignInWithGoogle}>
+            <Icons.google className="h-4 w-4 mr-2" /> Continue with Google
+          </Button>
+        </div>
         <small className="text-center text-sm font-medium leading-none">Have an account already? <button className="underline hover:text-blue-500" onClick={props.onSignInClick}>Sign in</button></small>
     </FormProvider>
   );
