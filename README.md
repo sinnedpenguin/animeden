@@ -37,3 +37,6 @@ AnimeDen is a free and ad-free anime streaming app.
 ## License
 
 Licensed under the [MIT License](LICENSE).
+
+## Donation
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/O4O1QRSMK)
