@@ -13,6 +13,7 @@ import { Quality } from '@/types/videoplayer';
 import { Icons } from '@/components/icons';
 import WatchlistButton from '../watchlist-button';
 import { auth } from '@/lib/firebase';
+import { SupportAlert } from '@/components/support-alert';
 
 interface Props {
   params: { id: string };
@@ -59,6 +60,7 @@ export default function AnimeInfo({ params }: Props) {
 
   return (
     <div className="container grid items-center gap-4 pb-8 pt-6 md:py-2">
+      <SupportAlert />
       <Episodes 
         episodes={animeInfo?.episodes || []} 
         userId={userId}  
