@@ -136,7 +136,7 @@ export default function SignInForm(props: SignInFormProps) {
       </form>
       <div>
         <Button type="button" className="w-full" onClick={handleSignInWithGoogle}>
-          <Icons.google className="h-4 w-4 mr-2" /> Continue with Google
+          <Icons.google className="mr-2 h-4 w-4" /> Continue with Google
         </Button>
       </div>
       <small className="text-center text-sm font-medium leading-none">Don&apos;t have an account? <button className="underline hover:text-blue-500" onClick={props.onSignUpClick}>Sign up</button></small>

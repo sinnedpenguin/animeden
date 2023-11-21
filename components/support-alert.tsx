@@ -9,7 +9,7 @@ export function SupportAlert() {
 
   return (
     isVisible ? (
-      <div className="flex items-center justify-between mt-4">
+      <div className="mt-4 flex items-center justify-between">
         <Alert>
           <div className="flex items-center justify-between">
             <div>
@@ -19,7 +19,7 @@ export function SupportAlert() {
             </div>
             <div className="flex items-center">
               <a href="https://ko-fi.com/sinnedpenguin" target="_blank" rel="noopener noreferrer">
-                <Button className="mr-2"><Icons.kofi className="h-5 w-4 mr-2" />Support</Button>
+                <Button className="mr-2"><Icons.kofi className="mr-2 h-5 w-4" />Support</Button>
               </a>
               <button onClick={() => setIsVisible(false)}>
                 <X className="h-4 w-4" />

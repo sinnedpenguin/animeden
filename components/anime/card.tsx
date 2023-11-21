@@ -44,7 +44,6 @@ export default function AnimeCard({ anime }: Props ) {
               {anime.rating}/100
             </Badge>
             <Image
-              priority
               width={500}
               height={500}
               src={anime.image}

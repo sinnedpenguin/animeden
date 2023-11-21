@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['s4.anilist.co'],
+    unoptimized: true
   },
 }
 
