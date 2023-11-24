@@ -20,5 +20,6 @@ export const siteConfig = {
   ],
   links: {
     github: "https://github.com/sinnedpenguin/animeden",
+    discord: "https://discord.gg/Gcch3jSrYt"
   },
 }
